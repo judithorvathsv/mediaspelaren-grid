@@ -1,0 +1,195 @@
+body {
+  width: 60%;
+  color: white;
+  font-size: 20px;
+  background-image: url("assets/cloud.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: "leftArrowHeader headerTitle rightArrowHeader";
+  align-content: center;
+  padding: 1.5rem;
+  border-right: 1px solid black;
+}
+
+#leftArrowHeader {
+  grid-area: leftArrowHeader;
+}
+#headerTitle {
+  grid-area: headerTitle;
+  text-align: center;
+}
+#rightArrowHeader {
+  grid-area: rightArrowHeader;
+  text-align: right;
+}
+
+main {
+  grid-area: main;
+  padding: 0, 2rem 2rem, 2rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "songListSection songPlayerSection";
+}
+
+section {
+  align-items: center;
+  border: 2px solid black;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+#songListSection {
+  grid-area: songListSection;
+  display: grid;
+  padding: 1.5rem;
+}
+
+.songItem {
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 20% 55% 25%;
+  grid-template-areas: "songPictureHolder songTitle playIcon";
+}
+
+#songPictureHolder {
+  grid-area: songPictureHolder;
+  align-items: start;
+  width: 7rem;
+}
+
+.songTitle {
+  grid-area: songTitle;
+  align-items: start;
+  margin-left: 1rem;
+}
+
+.songItem > span {
+  grid-area: playIcon;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+#songPlayerSection {
+  grid-area: songPlayerSection;
+  display: grid;
+  grid-template-rows: 50% 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: 1rem;
+}
+
+#songPictureHolderInPlayer {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0 1rem 0;
+}
+
+#songItemInPlayer {
+  display: grid;
+  grid-template-columns: 25% 1f 15%;
+  grid-template-areas: "addCircle songTitle favorite";
+}
+
+#addCircle {
+  grid-area: addCircle;
+  align-self: center;
+}
+
+#songItemInPlayer > .songTitle {
+  grid-area: songTitle;
+  text-align: center;
+}
+
+#favorite {
+  grid-area: favorite;
+  text-align: right;
+  align-self: center;
+}
+
+#playingTimeInfo {
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-areas: "timeStart timingLine timeEnd";
+}
+
+#timeStart {
+  grid-area: timeStart;
+  align-self: left;
+}
+
+#timingLine {
+  grid-area: timingLine;
+  text-align: left;
+}
+
+#timeEnd {
+  grid-area: timeEnd;
+  text-align: right;
+  align-self: center;
+}
+
+#songPlayerItem {
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-areas: "repeat playerButtons shuffle";
+  margin: 0 2rem 0 2rem;
+}
+
+#repeat {
+  grid-area: repeat;
+  align-self: center;
+}
+
+#playerButtons {
+  grid-area: playerButtons;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "rewind playButton forward";
+}
+
+#playButton {
+  grid-area: playButton;
+  padding: 1rem;
+  font-size: 70px;
+}
+
+#rewind,
+#forward {
+  align-self: center;
+}
+
+#shuffle {
+  grid-area: shuffle;
+  text-align: right;
+  align-self: center;
+}
+
+p:nth-child(even) {
+  color: #777;
+}
+
+/* @media only screen and (max-width: 768px) {
+  #songListSection {
+    display: none;
+  }
+
+  #songItemInPlayer > .songTitle > p {
+    width: 100%;
+    margin-left: -1rem;
+  }
+} */
