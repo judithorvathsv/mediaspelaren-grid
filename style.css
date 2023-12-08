@@ -62,7 +62,7 @@ img {
   width: 100%;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: 20% 55% 25%;
+  grid-template-columns: 25% 50% 25%;
   grid-template-areas: "songPictureHolder songTitle playIcon";
 }
 
@@ -81,7 +81,7 @@ img {
 .songItem > span {
   grid-area: playIcon;
   margin-left: auto;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 #songPlayerSection {
@@ -95,7 +95,7 @@ img {
 #songPictureHolderInPlayer {
   width: 100%;
   height: 100%;
-  padding: 5rem 0 1rem 0;
+  padding: 5rem 0 2rem 0;
 }
 
 #songItemInPlayer {
