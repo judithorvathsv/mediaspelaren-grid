@@ -123,7 +123,7 @@ img {
 #playingTimeInfo {
   display: grid;
   grid-template-columns: 15% 1fr 15%;
-  grid-template-areas: "timeStart timingLine timeEnd";
+  grid-template-areas: "timeStart timeline timeEnd";
 }
 
 #timeStart {
@@ -131,9 +131,23 @@ img {
   align-self: left;
 }
 
-#timingLine {
-  grid-area: timingLine;
-  text-align: left;
+#timeline {
+  grid-area: timeline;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "whiteLineTime blackLineTime";
+  grid-template-rows: 0.3rem;
+  align-self: center;
+}
+
+#whiteLineTime {
+  grid-area: whiteLineTime;
+  background-color: white;
+}
+
+#blackLineTime {
+  grid-area: blackLineTime;
+  background-color: black;
 }
 
 #timeEnd {
